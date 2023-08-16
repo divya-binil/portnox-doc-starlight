@@ -1,45 +1,28 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import react from '@astrojs/react';
 import NetlifyCMS from "astro-netlify-cms";
+
+
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    react(),
     starlight({
-      title: "PortNox Wiki",
+      title: "My Docs",
       social: {
-        github: "https://github.com/KWIA-PortNox/PortNox-Wiki",
+        github: "https://github.com/withastro/starlight",
       },
       sidebar: [
-        { label: "Introduction", link: "/introduction" },
-        { label: "User Manual", link: "/user-manual" },
         {
-          label: "Marketing and Growth Hacking",
-          link: "/marketing-and-growth",
+          label: "Guides",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            { label: "Example Guide", link: "/guides/example/" },
+          ],
         },
         {
-          label: "Project Management",
-          link: "/project-management",
-        },
-        {
-          label: "References",
-          link: "/references",
-        },
-        {
-          label: "MVP 01",
-          collapsed: true,
-          autogenerate: { directory: "mvp" },
-        },
-        {
-          label: "Onboarding",
-          collapsed: true,
-          autogenerate: { directory: "onboarding" },
-        },
-        {
-          label: "FAQs",
-          link: "/faq",
+          label: "Reference",
+          autogenerate: { directory: "reference" },
         },
       ],
     }),
@@ -53,7 +36,7 @@ export default defineConfig({
           {
             name: "posts",
             label: "Blog Posts",
-            folder: "src/content/docs/case-studies",
+            folder: "src/content/docs/guides",
             create: true,
             delete: true,
             fields: [

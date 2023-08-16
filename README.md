@@ -1,40 +1,51 @@
-# Purpose
+# Starlight Starter Kit: Basics
 
-This repo provides a general Inbox for all issues that are either a) not clearly related to any particular repo, or b) still too ambiguously defined or immature to be reliably assigned to a repo.
+```
+npm create astro@latest -- --template starlight
+```
 
-To author content you will need to clone the repo, use a local text editor to edit content, then GIT Sync your edits with the remote GitHub repo.
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
 
-# Setup and Configure the project Docs Wiki
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-Docs Repo: https://github.com/KWIA-PortNox/PortNox-Wiki
+## 🚀 Project Structure
 
-Steps to install PortNox-Wiki website in Local machine 
+Inside of your Astro + Starlight project, you'll see the following folders and files:
 
-## Prerequisites
-Install Node.js - v16.12.0 or higher. (install it from this url : https://nodejs.org/en/download )
+```
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── content/
+│   │   ├── docs/
+│   │   └── config.ts
+│   └── env.d.ts
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
+```
 
-### Text editor - recommend VS Code 
-install it from this url :  https://code.visualstudio.com/download
+Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
 
-After installing nodejs and VS code please take terminal (command prompt in windows terminal in linux) and run command node -v and check node installed correctly
+Images can be added to `src/assets/` and embedded in Markdown with a relative link.
 
-Instal Git-(please follow steps in this link https://git-scm.com/book/en/v2/Getting-Started-Installing-Git )
+Static assets, like favicons, can be placed in the `public/` directory.
 
-## Steps to run website in local machine
+## 🧞 Commands
 
-1. Git Clone the files from repo  https://github.com/KWIA-PortNox/PortNox-Wiki master branch
- (to clone files please take command prompt or terminal and type git clone https://github.com/KWIA-PortNox/PortNox-Wiki.git or if GIT is not installed you can download the code as zip file. When pressing on code button(green color at top right you can see download zip)
-2. Open the VS code then click on file menu at top left then from menu click on open folder then select your folder destination. Now you can see full files added to your vs code.  Click on Terminal menu in vs code.in terminal opened at bottom type npm install.
-3. After completing the above command. type npm run dev to Run the Astro dev server. 
-After successfully completing the above step, you can see http://localhost:3000 link in terminal you can open the project either by clicking this link from terminal itself or copy paste this link to browser. Now you can preview PortNox-Wiki site
+All commands are run from the root of the project, from a terminal:
 
-How to add new content to website
-Now we created 4 categories. 
-Management & Execution
-Strategy & Planning
-Operations
-Design
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:3000`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-so, for e.g. if you want to add new content to first category (Management & Execution)
-copy paste your md files to src\content\managment_execution\en\ folder
-If you want to add to other categories please add a folder just like above with 		category name and copy paste the md files into it.
+## 👀 Want to learn more?
+
+Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).

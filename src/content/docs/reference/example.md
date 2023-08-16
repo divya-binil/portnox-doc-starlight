@@ -1,5 +1,5 @@
 ---
-title: Case study 1
+title: Example Reference
 description: A reference page in my new Starlight docs site.
 ---
 
