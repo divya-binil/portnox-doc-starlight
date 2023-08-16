@@ -1,0 +1,33 @@
+{
+  "name": "starlight",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^2.2.1",
+    "@astrojs/starlight": "^0.5.0",
+    "@markdoc/markdoc": "^0.3.0",
+    "@mdx-js/mdx": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "astro": "^2.5.0",
+    "astro-netlify-cms": "^0.5.3",
+    "gatsby": "^5.11.0",
+    "gatsby-plugin-mdx": "^5.11.0",
+    "katex": "^0.16.8",
+    "rehype-katex": "^6.0.3",
+    "rehype-mathjax": "^4.0.2",
+    "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1",
+    "remark-smartypants": "^2.0.0",
+    "sharp": "^0.32.1"
+  },
+  "devDependencies": {
+    "eslint-plugin-mdx": "^2.1.0"
+  }
+}
